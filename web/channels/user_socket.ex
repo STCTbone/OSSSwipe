@@ -3,6 +3,7 @@ defmodule OssSwipe.UserSocket do
 
   ## Channels
   # channel "room:*", OssSwipe.RoomChannel
+  channel "swipe_session:*", OssSwipe.SwipeSessionChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
