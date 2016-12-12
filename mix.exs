@@ -19,7 +19,7 @@ defmodule OssSwipe.Mixfile do
   def application do
     [mod: {OssSwipe, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :phoenix_slime]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,6 +39,7 @@ defmodule OssSwipe.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 1.0.8"},
+     {:phoenix_slime, "~> 0.8.0"}
     ]
   end
 
