@@ -91,10 +91,10 @@ ENV MIX_HOST 8888
 EXPOSE $MIX_HOST
 
 RUN mkdir /app
-COPY ./rel/oss_wipe/releases/$VERSION/oss_swipe.tar.gz /app/oss_swipe.tar.gz
+COPY ./rel/oss_swipe/releases/$VERSION/oss_swipe.tar.gz /app/oss_swipe.tar.gz
 WORKDIR /app
 RUN tar -zxvf oss_swipe.tar.gz
 
-WORKDIR /app/releases/$VERISON
-ENTRYPOINT ["./hello_phoenix.sh"]
+WORKDIR /app/releases/${VERSION}
+ENTRYPOINT ["./oss_swipe.sh", "start"]
 CMD ["foreground"]
