@@ -1,5 +1,6 @@
 defmodule OssSwipe.Router do
   use OssSwipe.Web, :router
+  use ExAdmin.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,11 @@ defmodule OssSwipe.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+  end
+
+  scope "/admin", ExAdmin do
+    pipe_through :browser
+    admin_routes
   end
 
   # Other scopes may use custom stacks.
