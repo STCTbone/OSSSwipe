@@ -1,0 +1,5 @@
+h2 New end user
+
+= render "form.html", changeset: @changeset, action: end_user_path(@conn, :create)
+
+= link "Back", to: end_user_path(@conn, :index)

@@ -1,7 +1,7 @@
-defmodule OssSwipe.User do
+defmodule OssSwipe.EndUser do
   use OssSwipe.Web, :model
 
-  schema "users" do
+  schema "end_users" do
     field :first_name, :string
     field :last_name, :string
     field :favorites, {:array, :integer}
