@@ -18,7 +18,7 @@ defmodule OssSwipe.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {OssSwipe, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:coherence, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :phoenix_slime]]
   end
 
@@ -38,6 +38,7 @@ defmodule OssSwipe.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
+     {:coherence, "~> 0.3"},
      {:exrm, "~> 1.0.8"},
      {:ex_admin, "~> 0.8.0"},
      {:phoenix_slime, "~> 0.8.0"}

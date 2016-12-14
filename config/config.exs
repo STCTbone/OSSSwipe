@@ -33,7 +33,7 @@ config :ex_admin,
     OssSwipe.ExAdmin.Dashboard,
     OssSwipe.ExAdmin.Issue,
     OssSwipe.ExAdmin.Project,
-    OssSwipe.ExAdmin.User
+    OssSwipe.ExAdmin.EndUser
   ]
 
 # Import environment specific config. This must remain at the bottom
@@ -42,3 +42,12 @@ import_config "#{Mix.env}.exs"
 
 config :xain, :after_callback, {Phoenix.HTML, :raw}
 
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: OssSwipe.User,
+  repo: OssSwipe.Repo,
+  module: OssSwipe,
+  logged_out_url: "/",
+  opts: [:rememberable, :authenticatable]
+# %% End Coherence Configuration %%
