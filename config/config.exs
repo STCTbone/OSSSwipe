@@ -33,8 +33,10 @@ config :ex_admin,
     OssSwipe.ExAdmin.Dashboard,
     OssSwipe.ExAdmin.Issue,
     OssSwipe.ExAdmin.Project,
-    OssSwipe.ExAdmin.EndUser
+    OssSwipe.ExAdmin.User
   ]
+
+config :canary, repo: OssSwipe.Repo
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

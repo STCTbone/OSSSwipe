@@ -5,6 +5,9 @@ defmodule OssSwipe.User do
   schema "users" do
     field :name, :string
     field :email, :string
+    field :favorites, {:array, :integer}
+    field :blacklist, {:array, :integer}
+    field :github_name, :string
     coherence_schema
 
     timestamps

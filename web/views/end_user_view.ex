@@ -1,3 +1,3 @@
-defmodule OssSwipe.EndUserView do
+defmodule OssSwipe.UserView do
   use OssSwipe.Web, :view
 end
