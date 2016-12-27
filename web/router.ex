@@ -39,7 +39,7 @@ defmodule OssSwipe.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/users", UserController
+    get "/swipe", SwipeController, :index
   end
 
   scope "/admin", ExAdmin do
